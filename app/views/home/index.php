@@ -1,10 +1,12 @@
-<h3> Home Page </h3>
+<?php 
+require_once  APPROOT . "/views/inc/header.php";
+require_once  APPROOT . "/views/inc/nav.php";
+?>
+  
+<h3 class="text-primary">Hello</h3>
+<?php flash('login_success'); ?>
 
-<ul>
-    <?php foreach($data as $user)  :  ?>
-        <li><?php echo $user->name; ?></li>
-        <li><?php echo $user->email; ?></li>
-        <hr>
 
-    <?php endforeach;   ?>
-</ul>
+<?php 
+require_once  APPROOT . "/views/inc/footer.php";
+?>
