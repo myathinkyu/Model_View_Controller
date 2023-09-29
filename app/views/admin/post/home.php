@@ -30,7 +30,7 @@ require_once  APPROOT . "/views/inc/nav.php";
                                 <button class="english btn btn-danger text-white btn-sm ml-1">Delete</button>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 <?php endforeach; ?>
                 <!-- post card end -->
             </div>
