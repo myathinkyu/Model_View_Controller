@@ -17,10 +17,7 @@ require_once  APPROOT . "/views/inc/nav.php";
                 <?php foreach($data['cats'] as $cat) : ?>
                     <li class="list-group-item rounded-0 d-flex justify-content-between">
                         <span class="english"><?php echo $cat->name; ?></span>
-                        <span>
-                            <a href="<?php echo URLROOT. 'category/edit/' . $cat->id  ?>" class="english"><i class="fa fa-edit text-warning"></i></a>
-                            <a href="<?php echo URLROOT. 'category/delete/' . $cat->id  ?>" class="english"><i class="fa fa-trash text-danger"></i></a>
-                        </span>
+                        
                     </li>
                  <?php endforeach; ?>
             </ul>
@@ -33,24 +30,22 @@ require_once  APPROOT . "/views/inc/nav.php";
     <!-- register form start -->
     <?php flash('register_success'); ?>
     <?php flash('login_fail'); ?>
-        <h3 class="english text-info text-center mb-3 text-dark">Edit Category</h3>
-            <form action="<?php echo URLROOT . 'category/edit' ?>" method="post" autocomplete="on" class="table-bordered p-5">
+        <h3 class="english text-info text-center mb-3 text-dark">Create Category</h3>
+            <form action="<?php echo URLROOT . 'mcategory/create' ?>" method="post" autocomplete="on" class="table-bordered p-5">
                 <div class="form-group">
-                    <label for="name" class="english text-white">Category Name</label>
-                    <input type="text" class="form-control english <?php echo !empty($data['name_err']) ? 'is-invalid' : '' ; ?>" 
-                    id="name" name="name" value="<?php echo $data['currentCat'] -> name; ?>">
+                    <label for="name" class="english">Category Name</label>
+                    <input type="text" class="form-control english <?php echo !empty($data['name_err']) ? 'is-invalid' : '' ; ?>" id="name" name="name">
                     <span class="text-danger english"><?php echo !empty($data['name_err']) ? $data['name_err'] : '' ; ?></span>
                 </div>
                 <div class="row justify-content-end no-gutters">
                     <div>
                         <button class="btn btn-outline-secondary english">Cancle</button>
-                        <button class="btn btn-primary english bg-dark text-white border-0">Update</button>
+                        <button class="btn btn-primary english bg-dark border-0">Create</button>
                     </div>
                 </div>
             </form>
     <!-- register form end -->
 </div>
-
 
 <?php 
 require_once  APPROOT . "/views/inc/footer.php";

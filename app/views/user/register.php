@@ -8,7 +8,7 @@ require_once  APPROOT . "/views/inc/nav.php";
         <div class="col-md-8 offset-md-2">
             <div class="card bg-light p-5">
                 <!-- register form start -->
-                <h3 class="english text-info text-center mb-3">Register To Post</h3>
+                <h3 class="english text-info text-center mb-3 text-dark">Register To Post</h3>
                 <form action="<?php echo URLROOT . 'user/register' ?>"  method="post" autocomplete="on">
                     <div class="form-group">
                         <label for="username" class="english">Username</label>
@@ -31,10 +31,10 @@ require_once  APPROOT . "/views/inc/nav.php";
                         <span class="text-danger english"><?php echo !empty($data['confirm_password_err']) ? $data['confirm_password_err'] : '' ; ?></span>
                     </div>
                     <div class="row justify-content-between no-gutters">
-                        <a href="<?php echo URLROOT. 'user/login' ?>" class="english">Already Register, Please Login!</a>
+                        <a href="<?php echo URLROOT. 'user/login' ?>" class="english text-dark">Already Register, Please Login!</a>
                         <div>
                             <button class="btn btn-outline-secondary english">Cancle</button>
-                            <button class="btn btn-primary english">Register</button>
+                            <button class="btn btn-primary english bg-dark text-white border-0">Register</button>
                         </div>
                     </div>
                 </form>

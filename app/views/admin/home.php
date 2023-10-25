@@ -6,9 +6,7 @@ require_once  APPROOT . "/views/inc/nav.php";
 <div class="container-fluid p-0">
     <div class="row no-gutters">
         <?php require_once  APPROOT . "/views/inc/sidebar.php"; ?>
-        <div class="col-md-9">
-            Admin Template
-        </div>
+        <img src="<?php echo URLROOT."assets/imgs/pink.jpg" ?>" style="margin-left: 40px; margin-top: 50px;" alt="" >
     </div>
 </div>
 

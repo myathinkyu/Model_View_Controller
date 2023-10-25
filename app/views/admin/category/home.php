@@ -33,7 +33,7 @@ require_once  APPROOT . "/views/inc/nav.php";
     <!-- register form start -->
     <?php flash('register_success'); ?>
     <?php flash('login_fail'); ?>
-        <h3 class="english text-info text-center mb-3">Create Category</h3>
+        <h3 class="english text-info text-center mb-3 text-dark">Create Category</h3>
             <form action="<?php echo URLROOT . 'category/create' ?>" method="post" autocomplete="on" class="table-bordered p-5">
                 <div class="form-group">
                     <label for="name" class="english">Category Name</label>
@@ -43,7 +43,7 @@ require_once  APPROOT . "/views/inc/nav.php";
                 <div class="row justify-content-end no-gutters">
                     <div>
                         <button class="btn btn-outline-secondary english">Cancle</button>
-                        <button class="btn btn-primary english">Create</button>
+                        <button class="btn btn-primary english bg-dark text-white border-0">Create</button>
                     </div>
                 </div>
             </form>

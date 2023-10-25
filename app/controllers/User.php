@@ -26,6 +26,7 @@ class User extends Controller
             if(empty($data['name'])){
                 $data['name_err'] = "Username must be supply!";
             }
+            
             if(empty($data['email'])){
                 $data['email_err'] = "Email must be supply!";
             }else{
@@ -84,8 +85,13 @@ class User extends Controller
                 if($rowUser){
                     $hash_pass = $rowUser->password;
                     if(password_verify($data['password'], $hash_pass)){
+                        if($_POST['email'] == 'christina@gmail.com'){
                         setUserSession($rowUser);
                         redirect(URLROOT . 'admin/home');
+                    }else{
+                        setUserSession($rowUser);
+                        redirect(URLROOT . 'member/home');
+                    }
                     }else{
                         flash("login_fail", "User Creditial Error!");
                         $this->view('user/login');
@@ -105,7 +111,7 @@ class User extends Controller
     public function logout()
     {
         unsetUserSession();
-        $this->view('home/index');
+        redirect(URLROOT);
     }
 }
 ?>
